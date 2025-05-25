@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "use_of_force_classifier"
+version = "0.0.1"
+description = "In this project, 'police use of force' refers to any physical or coercive action taken by officers during an intervention, as recorded in the Seattle Police Department dataset."
+authors = [
+  { name = "This is my personal project of machine learning." },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "==3.11.5"
+
+
+[tool.ruff]
+line-length = 99
+src = ["use_of_force_classifier"]
+include = ["pyproject.toml", "use_of_force_classifier/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["use_of_force_classifier"]
+force-sort-within-sections = true
+
